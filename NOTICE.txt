@@ -1,2 +1,2 @@
-PDS Validate Tool
+PDS XYZ Tool
 Copyright 2019 California Institute of Technology
