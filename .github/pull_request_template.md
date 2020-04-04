@@ -1,12 +1,3 @@
----
-name: Pull Request Template
-about: Pull request template
-title: "Short (72 chars or less) summary"
-labels: 
-assignees: ''
-
----
-
 ----- REMOVE -----
 Title ^^^^ above ^^^^ should follow good commit message best practices wherever possible.
 
