@@ -1,13 +1,11 @@
 ---
 name: I&T Bug Report
 about: Report a bug found or test case failure during PDS System I&T
-title: ''
+title: "<system feature> <is not/does not> <expected behaviour>"
 labels: I&T, bug, triage-needed
 assignees: ''
 
 ---
-
-*Input title above :arrow_up: . See [this guide for creating good issue titles](https://stratejos.ai/blog/naming-task-bug-user-story-titles/)*
 
 **Describe the bug**
 A clear and concise description of what the bug is.
