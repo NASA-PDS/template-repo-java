@@ -34,6 +34,6 @@ If applicable, add screenshots to help explain your problem.
  - Browser [e.g. chrome, safari]
  - Version [e.g. 22]
 
- **Linked requirements**
+**Applicable requirements**
  :unicorn: #1
  :unicorn: #2
