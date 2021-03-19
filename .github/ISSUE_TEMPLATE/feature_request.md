@@ -2,7 +2,7 @@
 name: Feature request
 about: Suggest a new idea for this project
 title: As a <what is the user's role?> I want to <what is the user trying to accomplish?>
-labels: requirement, triage-needed
+labels: requirement, needs:triage
 assignees: jordanpadams
 
 ---
@@ -15,7 +15,7 @@ https://github.com/NASA-PDS/nasa-pds.github.io/wiki/Issue-Tracking#user-story-de
 ...so that I can <why do you want to do this?>
 
 ## Additional Details
-> Please prove any additional details or information that could help provide some context for the user story.
+<Please prove any additional details or information that could help provide some context for the user story.>
 
 ## Acceptance Criteria
 **Given** *<a condition>*
