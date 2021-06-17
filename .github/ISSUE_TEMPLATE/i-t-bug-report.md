@@ -11,10 +11,11 @@ assignees: jordanpadams
 <!-- A clear and concise description of what the bug is. -->
 
 
-## :lab_coat: Related Test Case(s)
+## 🥼 Related Test Case(s)
 <!-- Document related test cases below -->
 
-## :repeat: Related issues
+
+## 🔁 : Related issues
 <!-- Reference related issues below, e.g.
 * for issues in this repo: #1 (remove back ticks)
 * for issues in other repos: NASA-PDS/my_repo#1, NASA-PDS/that_repo#2
@@ -22,7 +23,7 @@ assignees: jordanpadams
 
 ---
 
-## Additional Details
+## ➕ Additional Details
 <!-- Enter additional details to support the ticket if the info above is not sufficient to replicate -->
 
 ### 📜 To Reproduce
@@ -52,7 +53,7 @@ Steps to reproduce the behavior:
 ---
 <!-- FOR DEV TEAM USE -->
 
-## :unicorn: Related requirements
+## 🦄 Related requirements
 
 
-## :gear: Engineering Details
+## ⚙️ Engineering Details
