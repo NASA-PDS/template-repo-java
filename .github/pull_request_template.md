@@ -1,12 +1,14 @@
 ## Summary
-<!-- Brief summary of changes if not sufficiently described by commit messages. -->
+<!-- Provide brief summary of changes below if not sufficiently described by commit messages. -->
+
 
 ## Test Data and/or Report
 <!-- 
-    One of the following should be included here:
+    One of the following should be included below:
     * Reference to regression test included in code (preferred wherever reasonable)
-    * Attach test data here + outputs of tests
+    * Attach test data + outputs of tests
 -->
+
 
 ## Related Issues
 <!--
