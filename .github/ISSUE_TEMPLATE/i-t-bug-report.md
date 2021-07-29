@@ -15,7 +15,7 @@ assignees: jordanpadams
 <!-- Document related test cases below -->
 
 
-## 🔁 : Related issues
+## 🔁 Related issues
 <!-- Reference related issues below, e.g.
 * for issues in this repo: #1 (remove back ticks)
 * for issues in other repos: NASA-PDS/my_repo#1, NASA-PDS/that_repo#2

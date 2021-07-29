@@ -1,19 +1,30 @@
-# NASA PDS New Project Template
+# 🪐 NASA PDS New Java Project Template
 
-My new awesome project
+This is the template for new Java projects. Replace this text with your own documentation.
 
-## Installation
 
-_Installation instructions here_
+## 📀 Installation
 
-## Usage
+
+_Installation instructions here_.
+
+
+## 💁‍♀️ Usage
 
 _Basic usage instructions here_
 
-## Contributing
-Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate.
+## 👥 Contributing
 
-## License
-[APLv2](https://www.apache.org/licenses/LICENSE-2.0)
+Please see the [contribution guidelines](.github/contributing.md).
+
+
+### 🔢 Versioning
+
+We use the [SemVer](https://semver.org/) philosophy for versioning this software. Or not! Update this as you see fit.
+
+
+## 📃 License
+
+The project is licensed under the [Apache version 2](LICENSE.md) license. Or it isn't. Change this after consulting with your lawyers.
+
