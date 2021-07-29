@@ -110,20 +110,6 @@ Go through this file line-by-line and replace the template values with your own.
         </dependency>
     </dependencies>
 
-<!-- TODO need this?
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>org.junit</groupId>
-                <artifactId>junit-bom</artifactId>
-                <version>5.7.2</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
--->
-
     <build>
         <!--
         Resources (files) are non-code parts of a project that the code-parts access during run time; these
