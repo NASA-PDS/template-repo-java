@@ -160,6 +160,7 @@ Go through this file line-by-line and replace the template values with your own.
     <distributionManagement/>
     <reporting/>
     <licenses/>
+    <organization/>
 
     <!--
     Speaking of the parent POM, here we say what it is: every PDS Maven project inherits from this parent.
