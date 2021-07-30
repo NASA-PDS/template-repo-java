@@ -1,16 +1,18 @@
-# Security Policy
+# 👮‍♀️ Security Policy
 
-## Supported Versions
+This document describes the security policy of My Project. (Please update this for your actual project.)
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+## 📀 Supported Versions
+
+Use this section to tell people about which versions of your project are currently being supported with security updates; for example, with a table like the following:
 
 | Version | Supported          |
-| ------- | ------------------ |
-| 1.18.2   | :white_check_mark: |
-| 1.17.5   | :white_check_mark: |
-| < 1.17.5   | :x: |
+|:--------|:------------------:|
+| 2.1.3   | ✅                 |
+| 2.1.4   | ✅                 |
+| <2.0    | ❌                 |
 
-## Reporting a Vulnerability
 
-Please create a new issue using the [Vulnerability Issue template](https://github.com/NASA-PDS-Incubator/validate/issues/new?assignees=jordanpadams&labels=triage-needed%2C+security&template=vulnerability-issue.md&title=%5BSECURITY%5D+Title+Here)
+## 🚨 Reporting a Vulnerability
+
+Please fill in here what the right way to report a vulnerability is for your project; it might be submitting an issue of a specific type on GitHub, for example.
