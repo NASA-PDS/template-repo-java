@@ -38,8 +38,24 @@ POSSIBILITY OF SUCH DAMAGE.
 Go through this file line-by-line and replace the template values with your own.
 -->
 
-<project xmlns='http://maven.apache.org/POM/4.0.0' xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
-    xsi:schemaLocation='http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd'>
+<project xmlns='http://maven.apache.org/POM/4.0.0'
+         xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+         xsi:schemaLocation='http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd'>
+
+    <!-- POM-specific metadata -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--
+    Speaking of the parent POM, here we say what it is: every PDS Maven project inherits from this parent.
+    Maven (and other compatible build tools) resolve this automatically, but you can find the source of this
+    parent at https://github.com/NASA-PDS/pdsen-maven-parent
+    -->
+    <parent>
+        <groupId>gov.nasa</groupId>
+        <artifactId>pds</artifactId>
+        <version>1.12.0</version>
+    </parent>
+  
     <!-- My project metadata here -->
     <properties>
         <!-- Obviously put in your own project name instead of `myproject` -->
@@ -161,19 +177,5 @@ Go through this file line-by-line and replace the template values with your own.
     <reporting/>
     <licenses/>
     <organization/>
-
-    <!--
-    Speaking of the parent POM, here we say what it is: every PDS Maven project inherits from this parent.
-    Maven (and other compatible build tools) resolve this automatically, but you can find the source of this
-    parent at https://github.com/NASA-PDS/pdsen-maven-parent
-    -->
-    <parent>
-        <groupId>gov.nasa</groupId>
-        <artifactId>pds</artifactId>
-        <version>1.9.0</version>
-    </parent>
-
-    <!-- POM-specific metadata -->
-    <modelVersion>4.0.0</modelVersion>
 
 </project>
