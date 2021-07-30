@@ -89,7 +89,7 @@ Go through this file line-by-line and replace the template values with your own.
     <url>https://nasa-pds.github.io/${project.name}</url>
     <issueManagement>
         <system>GitHub</system>
-        <url>https://nasa-pds.github.io/${project.name}/issues</url>
+        <url>https://github.com/NASA-PDS/${project.name}/issues</url>
     </issueManagement>
     <scm>
         <connection>scm:git:https://github.com/NASA-PDS/${project.name}.git</connection>
