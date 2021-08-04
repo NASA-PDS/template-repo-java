@@ -178,6 +178,6 @@ Go through this file line-by-line and replace the template values with your own.
     <distributionManagement/>
     <reporting/>
     <licenses/>
-    <organization/>
+    <organization/>  <!-- ← Might not be implemented in parent pom yet -->
 
 </project>
