@@ -11,7 +11,7 @@ _Installation instructions here_.
 
 ## 💁‍♀️ Usage
 
-_Basic usage instructions here_
+_Basic usage instructions here_.
 
 
 ## 👥 Contributing
