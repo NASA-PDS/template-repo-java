@@ -152,6 +152,8 @@ Go through this file line-by-line and replace the template values with your own.
 
             This plugin below makes this package an *executable* jar. If you want to make a plain jar, adjust
             the parameters below; or use a different plugin to get a differnt kind of artifact.
+
+            You can find some plugins at: https://maven.apache.org/plugins/
             -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
