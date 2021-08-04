@@ -56,7 +56,7 @@ jobs:
 
             -
                 name: 🤠 Roundup
-                uses: NASA-PDS/roundup-action@main
+                uses: NASA-PDS/roundup-action@i36
                 with:
                     assembly: unstable
                 env:
