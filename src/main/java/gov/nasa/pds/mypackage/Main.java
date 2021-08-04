@@ -60,6 +60,7 @@ public final class Main {
         System.out.println(greeting);
     }
 
+    // Static initializers don't get doc comments.
     static {
         try {
             Properties props = new Properties();
