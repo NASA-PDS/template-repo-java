@@ -56,7 +56,7 @@ jobs:
                     fetch-depth: 0
             -
                 name: 💵 Maven Cache
-                uses: action/cache@v2
+                uses: actions/cache@v2
                 with:
                     path: ~/.m2/repository
                     # The "key" used to indicate a set of cached files is the operating system runner
