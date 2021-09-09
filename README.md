@@ -11,11 +11,11 @@ This repository aims at being a base for new Java repositories used in PDS. It g
     - [Update Version Numbers](#update-version-numbers)
     - [Update Changelog](#update-changelog)
     - [Commit Changes](#commit-changes)
-    - [Build and Deploy Software to [Sonatype Maven Repo](https://repo.maven.apache.org/maven2/gov/nasa/pds/).](#build-and-deploy-software-to--sonatype-maven-repo--https---repomavenapacheorg-maven2-gov-nasa-pds--)
-  + [Push Tagged Release](#push-tagged-release)
-  + [Deploy Site to Github Pages](#deploy-site-to-github-pages)
-  + [Update Versions For Development](#update-versions-for-development)
-  + [Complete Release in Github](#complete-release-in-github)
+    - [Build and Deploy Software to Maven Central Repo](#build-and-deploy-software-to-maven-central-repo)
+    - [Push Tagged Release](#push-tagged-release)
+    - [Deploy Site to Github Pages](#deploy-site-to-github-pages)
+    - [Update Versions For Development](#update-versions-for-development)
+    - [Complete Release in Github](#complete-release-in-github)
 * [📃 License](#---license)
 
 ## 🏃 Getting Started With This Template
@@ -55,6 +55,7 @@ Within the NASA Planetary Data System, we value the health of our community as m
 
 We use the [SemVer](https://semver.org/) philosophy for versioning this software. Or not! Update this as you see fit.
 
+
 ### Manual Publication
 
 _**NOTE: Requires using [PDS Maven Parent POM](https://github.com/NASA-PDS/pdsen-maven-parent) to ensure release profile is set.**_
@@ -92,7 +93,7 @@ git commit -m "[RELEASE] Validate v$VERSION"
 git push -u origin main
 ```
 
-#### Build and Deploy Software to [Sonatype Maven Repo](https://repo.maven.apache.org/maven2/gov/nasa/pds/).
+#### Build and Deploy Software to Maven Central Repo
 
 ```
 # For operational release
@@ -102,7 +103,7 @@ mvn clean site site:stage package deploy -P release
 mvn clean site site:stage package deploy
 ```
 
-### Push Tagged Release
+#### Push Tagged Release
 ```
 # For Release Candidate, you may need to delete old SNAPSHOT tag
 git push origin :v$VERSION
@@ -114,7 +115,7 @@ git push --tags
 
 ```
 
-### Deploy Site to Github Pages
+#### Deploy Site to Github Pages
 
 From cloned repo:
 ```
@@ -134,7 +135,7 @@ git commit -m "Deploy v${VERSION}-rc${CANDIDATE_NUM} docs"
 git push origin gh-pages
 ```
 
-### Update Versions For Development
+#### Update Versions For Development
 
 Update `pom.xml` with the next SNAPSHOT version either manually or using Github Versions Plugin.
 
@@ -153,10 +154,11 @@ git commit -m "Update version for $VERSION development"
 git push -u origin main
 ```
 
-### Complete Release in Github
+#### Complete Release in Github
 Currently the process to create more formal release notes and attach Assets is done manually through the Github UI, but should eventually be automated via script.
 
 *NOTE: Be sure to add the `tar.gz` and `zip` from the `target/` directory to the release assets, and use the CHANGELOG generated above to create the RELEASE NOTES.*
+
 
 ## 📃 License
 
