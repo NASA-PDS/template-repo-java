@@ -2,22 +2,6 @@
 
 This repository aims at being a base for new Java repositories used in PDS. It guides developers to ease the initialization of a project and recommends preferred options to standardize developments and ease maintenance. Simply click the <kbd>Use this template</kbd> button ↑ (or use [this hyperlink](https://github.com/NASA-PDS/pds-template-repo-java/generate)).
 
-* [🏃 Getting Started With This Template](#---getting-started-with-this-template)
-* [📀 Installation](#---installation)
-* [💁‍♀️ Usage](#------usage)
-* [👥 Contributing](#---contributing)
-  + [🔢 Versioning](#---versioning)
-  + [Manual Publication](#manual-publication)
-    - [Update Version Numbers](#update-version-numbers)
-    - [Update Changelog](#update-changelog)
-    - [Commit Changes](#commit-changes)
-    - [Build and Deploy Software to Maven Central Repo](#build-and-deploy-software-to-maven-central-repo)
-    - [Push Tagged Release](#push-tagged-release)
-    - [Deploy Site to Github Pages](#deploy-site-to-github-pages)
-    - [Update Versions For Development](#update-versions-for-development)
-    - [Complete Release in Github](#complete-release-in-github)
-* [📃 License](#---license)
-
 ## 🏃 Getting Started With This Template
 
 See our wiki page for more info on setting up your new repo. You can remove this section once you have completed the necessary start-up steps.
@@ -32,6 +16,30 @@ https://github.com/NASA-PDS/nasa-pds.github.io/wiki/Git-and-Github-Guide#creatin
 | `@NASA-PDS/pds-software-pmc`        | `admin`    |
 | `@NASA-PDS/pds-operations`          | `admin`    |
 
+---
+
+# My Project
+
+This is the XYZ that does this, that, and the other thing for the Planetary Data System.
+
+Please visit our website at: https://nasa-pds.github.io/pds-my-project
+
+It has useful information for developers and end-users.
+
+* [📀 Installation](#---installation)
+* [💁‍♀️ Usage](#------usage)
+* [👥 Contributing](#---contributing)
+  + [🔢 Versioning](#---versioning)
+  + [Manual Publication](#manual-publication)
+    - [Update Version Numbers](#update-version-numbers)
+    - [Update Changelog](#update-changelog)
+    - [Commit Changes](#commit-changes)
+    - [Build and Deploy Software to Maven Central Repo](#build-and-deploy-software-to-maven-central-repo)
+    - [Push Tagged Release](#push-tagged-release)
+    - [Deploy Site to Github Pages](#deploy-site-to-github-pages)
+    - [Update Versions For Development](#update-versions-for-development)
+    - [Complete Release in Github](#complete-release-in-github)
+* [📃 License](#---license)
 
 ## 📀 Installation
 
