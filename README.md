@@ -2,6 +2,21 @@
 
 This repository aims at being a base for new Java repositories used in PDS. It guides developers to ease the initialization of a project and recommends preferred options to standardize developments and ease maintenance. Simply click the <kbd>Use this template</kbd> button ↑ (or use [this hyperlink](https://github.com/NASA-PDS/pds-template-repo-java/generate)).
 
+* [🏃 Getting Started With This Template](#---getting-started-with-this-template)
+* [📀 Installation](#---installation)
+* [💁‍♀️ Usage](#------usage)
+* [👥 Contributing](#---contributing)
+  + [🔢 Versioning](#---versioning)
+  + [Manual Publication](#manual-publication)
+    - [Update Version Numbers](#update-version-numbers)
+    - [Update Changelog](#update-changelog)
+    - [Commit Changes](#commit-changes)
+    - [Build and Deploy Software to Maven Central Repo](#build-and-deploy-software-to-maven-central-repo)
+    - [Push Tagged Release](#push-tagged-release)
+    - [Deploy Site to Github Pages](#deploy-site-to-github-pages)
+    - [Update Versions For Development](#update-versions-for-development)
+    - [Complete Release in Github](#complete-release-in-github)
+* [📃 License](#---license)
 
 ## 🏃 Getting Started With This Template
 
@@ -39,6 +54,110 @@ Within the NASA Planetary Data System, we value the health of our community as m
 ### 🔢 Versioning
 
 We use the [SemVer](https://semver.org/) philosophy for versioning this software. Or not! Update this as you see fit.
+
+
+### Manual Publication
+
+_**NOTE: Requires using [PDS Maven Parent POM](https://github.com/NASA-PDS/pdsen-maven-parent) to ensure release profile is set.**_
+
+#### Update Version Numbers
+
+Update pom.xml for the release version or use the Maven Versions Plugin, e.g.:
+
+```
+# Skip this step if this is a RELEASE CANDIDATE, we will deploy as SNAPSHOT version for testing
+VERSION=1.15.0
+mvn versions:set -DnewVersion=$VERSION
+git add pom.xml
+git add */pom.xml
+```
+
+#### Update Changelog
+Update Changelog using [Github Changelog Generator](https://github.com/github-changelog-generator/github-changelog-generator). Note: Make sure you set `$CHANGELOG_GITHUB_TOKEN` in your `.bash_profile` or use the `--token` flag.
+```
+# For RELEASE CANDIDATE, set VERSION to future release version.
+GITHUB_ORG=NASA-PDS
+GITHUB_REPO=validate
+github_changelog_generator --future-release v$VERSION --user $GITHUB_ORG --project $GITHUB_REPO --configure-sections '{"improvements":{"prefix":"**Improvements:**","labels":["Epic"]},"defects":{"prefix":"**Defects:**","labels":["bug"]},"deprecations":{"prefix":"**Deprecations:**","labels":["deprecation"]}}' --no-pull-requests --token $GITHUB_TOKEN
+
+git add CHANGELOG.md
+```
+
+#### Commit Changes
+Commit changes using following template commit message:
+```
+# For operational release
+git commit -m "[RELEASE] Validate v$VERSION"
+
+# Push changes to main
+git push -u origin main
+```
+
+#### Build and Deploy Software to Maven Central Repo
+
+```
+# For operational release
+mvn clean site site:stage package deploy -P release
+
+# For release candidate
+mvn clean site site:stage package deploy
+```
+
+#### Push Tagged Release
+```
+# For Release Candidate, you may need to delete old SNAPSHOT tag
+git push origin :v$VERSION
+
+# Now tag and push
+REPO=validate
+git tag v${VERSION} -m "[RELEASE] $REPO v$VERSION" -m "See [CHANGELOG](https://github.com/NASA-PDS/$REPO/blob/main/CHANGELOG.md) for more details."
+git push --tags
+
+```
+
+#### Deploy Site to Github Pages
+
+From cloned repo:
+```
+git checkout gh-pages
+
+# Copy the over to version-specific and default sites
+rsync -av target/staging/ .
+
+git add .
+
+# For operational release
+git commit -m "Deploy v$VERSION docs"
+
+# For release candidate
+git commit -m "Deploy v${VERSION}-rc${CANDIDATE_NUM} docs"
+
+git push origin gh-pages
+```
+
+#### Update Versions For Development
+
+Update `pom.xml` with the next SNAPSHOT version either manually or using Github Versions Plugin.
+
+For RELEASE CANDIDATE, ignore this step.
+
+```
+git checkout main
+
+# For release candidates, skip to push changes to main
+VERSION=1.16.0-SNAPSHOT
+mvn versions:set -DnewVersion=$VERSION
+git add pom.xml
+git commit -m "Update version for $VERSION development"
+
+# Push changes to main
+git push -u origin main
+```
+
+#### Complete Release in Github
+Currently the process to create more formal release notes and attach Assets is done manually through the Github UI, but should eventually be automated via script.
+
+*NOTE: Be sure to add the `tar.gz` and `zip` from the `target/` directory to the release assets, and use the CHANGELOG generated above to create the RELEASE NOTES.*
 
 
 ## 📃 License
