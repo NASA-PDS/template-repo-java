@@ -1,6 +1,14 @@
 # Changelog
 
-## [v1.0.0-SNAPSHOT](https://github.com/NASA-PDS/pds-template-repo-java/tree/v1.0.0-SNAPSHOT) (2021-09-17)
+## [«unknown»](https://github.com/NASA-PDS/pds-template-repo-java/tree/«unknown») (2021-10-19)
+
+[Full Changelog](https://github.com/NASA-PDS/pds-template-repo-java/compare/v1.0.0-SNAPSHOT...«unknown»)
+
+**Improvements:**
+
+- Update README to include more details similar to python template repo [\#9](https://github.com/NASA-PDS/pds-template-repo-java/issues/9)
+
+## [v1.0.0-SNAPSHOT](https://github.com/NASA-PDS/pds-template-repo-java/tree/v1.0.0-SNAPSHOT) (2021-09-21)
 
 [Full Changelog](https://github.com/NASA-PDS/pds-template-repo-java/compare/11104d38a2dfcb23e537dd9e8436b1d3b204d879...v1.0.0-SNAPSHOT)
 
