@@ -88,15 +88,22 @@ Go through this file line-by-line and replace the template values with your own.
     </description>
     <!-- Check the calendar -->
     <inceptionYear>2021</inceptionYear>
-    <url>https://nasa-pds.github.io/${project-name}</url>
+
+    <!--
+    👉 Note: in the elements below, we cannot use `${project-name}` as apparently property expansion does
+    not occur here despite the documentation at https://maven.apache.org/pom.html#Properties says.
+
+    So be sure to replace all five `myproject`s below with your actual project name!
+    -->
+    <url>https://nasa-pds.github.io/myproject</url>
     <issueManagement>
         <system>GitHub</system>
-        <url>https://github.com/NASA-PDS/${project-name}/issues</url>
+        <url>https://github.com/NASA-PDS/myproject/issues</url>
     </issueManagement>
     <scm>
-        <connection>scm:git:https://github.com/NASA-PDS/${project-name}.git</connection>
-        <developerConnection>scm:git:ssh://github.com/NASA-PDS/${project-name}.git</developerConnection>
-        <url>https://nasa-pds.github.io/${project-name}</url>
+        <connection>scm:git:https://github.com/NASA-PDS/myproject.git</connection>
+        <developerConnection>scm:git:ssh://github.com/NASA-PDS/myproject.git</developerConnection>
+        <url>https://nasa-pds.github.io/myproject</url>
         <tag>main</tag>
     </scm>
 
