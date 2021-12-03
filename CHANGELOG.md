@@ -1,6 +1,6 @@
 # Changelog
 
-## [v1.0.0-SNAPSHOT](https://github.com/NASA-PDS/pds-template-repo-java/tree/v1.0.0-SNAPSHOT) (2021-10-19)
+## [v1.0.0-SNAPSHOT](https://github.com/NASA-PDS/pds-template-repo-java/tree/v1.0.0-SNAPSHOT) (2021-11-19)
 
 [Full Changelog](https://github.com/NASA-PDS/pds-template-repo-java/compare/11104d38a2dfcb23e537dd9e8436b1d3b204d879...v1.0.0-SNAPSHOT)
 
