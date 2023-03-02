@@ -90,7 +90,7 @@ Go through this file line-by-line and replace the template values with your own.
     <inceptionYear>2021</inceptionYear>
 
     <!--
-    👉 Note: in the elements below, we cannot use `${project-name}` as apparently property expansion does
+    Note: in the elements below, we cannot use `${project-name}` as apparently property expansion does
     not occur here despite the documentation at https://maven.apache.org/pom.html#Properties says.
 
     So be sure to replace all five `myproject`s below with your actual project name!
