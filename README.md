@@ -82,6 +82,27 @@ to produce a complete package. This runs all the phases necessary, including com
 -   `deploy` - deploy to a remote repository — note that the Roundup action does this automatically for releases
 
 
+#### 🪝 Pre-Commit Hooks
+
+This package comes with a configuration for [Pre-Commit](https://pre-commit.com/), a system for automating and standardizing `git` hooks for code linting, security scanning, etc. Here in this Java template repository, we use Pre-Commit with [Git Secrets](https://github.com/awslabs/git-secrets) to prevent the accidental committing or commit messages containing secrets like API keys and passwords.
+
+Pre-Commit is language-neutral, but is itself written in Python. To take advantage of Pre-Commit, you'll need a nearby Python installation. A recommended way to do this is with a virtual Python environment. Using the command line interface, run:
+
+```console
+$ python -m venv .venv
+$ source .venv/bin/activate   # Use source .venv/bin/activate.csh if you're using a C-style shell
+$ pip install pre-commit
+$ pre-commit install
+$ pre-commit install -t pre-push
+$ pre-commit install -t prepare-commit-msg
+$ pre-commit install -t commit-msg
+```
+
+You can then work normally. Pre-commit will run automatically during `git commit` and `git push` so long as the Python virtual environment is active.
+
+👉 **Note:** For Git Secrets to work, there is a one-time setup required to your personal global Git configuration. See [the wiki entry on Git Secrets](https://github.com/NASA-PDS/nasa-pds.github.io/wiki/Git-and-Github-Guide#git-secrets) to learn how to do this.
+
+
 ### 🚅 Continuous Integration & Deployment
 
 Thanks to [GitHub Actions](https://github.com/features/actions) and the [Roundup Action](https://github.com/NASA-PDS/roundup-action), this software undergoes continuous integration and deployment. Every time a change is merged into the `main` branch, an "unstable" (known in Java software development circles as a "SNAPSHOT") is created and delivered to [the releases page](https://github.com/NASA-PDS/pds-template-repo-java/releases) and to the [OSSRH](https://central.sonatype.org/publish/publish-guide/).
@@ -89,7 +110,6 @@ Thanks to [GitHub Actions](https://github.com/features/actions) and the [Roundup
 You can make an official delivery by pushing a `release/X.Y.Z` branch to GitHub, replacing `X` with the major version number, `Y` with the minor version number, and `Z` with the micro version number. This results in a stable (non-SNAPSHOT) release generated and cryptographically signed (but by an automated process so alter trust expectations accordingly) and made available on the releases page and OSSRH; the [website published](https://nasa-pds.github.io/pds-template-repo-java/); changelogs and requirements updated; and a new version number in the `main` branch prepared for future development.
 
 The following sections detail how to do this manually should the automated steps fail.
-
 
 
 ### 🔧 Manual Publication
@@ -152,6 +172,7 @@ $ git push --tags
 
 ```
 
+
 #### Deploy Site to Github Pages
 
 From cloned repo:
@@ -166,6 +187,7 @@ $ # For release candidate
 $ git commit -m "Deploy v${VERSION}-rc${CANDIDATE_NUM} docs"
 $ git push origin gh-pages
 ```
+
 
 #### Update Versions For Development
 
@@ -182,6 +204,7 @@ $ git commit -m "Update version for $VERSION development"
 $ # Push changes to main
 $ git push --set-upstream origin main
 ```
+
 
 #### Complete Release in Github
 

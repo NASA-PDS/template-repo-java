@@ -1,0 +1,29 @@
+# Pre-Commit
+# ==========
+#
+# Pre-Commit (https://pre-commit.com/) is a framework for handling the hooks
+# for git to easily standardizez on linters, code-cleaners, security
+# scanners, etc.
+#
+# Currently for Java repositories, we support the following hooks:
+#
+# - Git Secrets (https://github.com/awslabs/git-secrets)
+#
+# Future hooks could include: trailing whitespace alerts, executable shebangs,
+# debug statements left in code, Google code style adherence, etc.
+
+
+---
+
+repos:
+    -
+        # Git Secrets: prevent API keys, passwords, etc.
+        repo: https://github.com/awslabs/git-secrets.git
+        rev: b9e96b3212fa06aea65964ff0d5cda84ce935f38
+        hooks:
+            -
+                id: git-secrets
+
+...
+
+# -*- mode: YAML; tab-width: 4 -*-
