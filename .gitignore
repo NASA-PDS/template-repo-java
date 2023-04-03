@@ -78,6 +78,9 @@ typescript
 .gwt/
 target/
 
+# Python stuff
+.venv
+
 # macOS specific stuff
 .DS_Store
 ._*
