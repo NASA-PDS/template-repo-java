@@ -1,5 +1,13 @@
 # Changelog
 
+## [«unknown»](https://github.com/NASA-PDS/template-repo-java/tree/«unknown») (2023-04-03)
+
+[Full Changelog](https://github.com/NASA-PDS/template-repo-java/compare/v0.1.0...«unknown»)
+
+**Other closed issues:**
+
+- Add git-secrets pre-commit to java template repo [\#25](https://github.com/NASA-PDS/template-repo-java/issues/25)
+
 ## [v0.1.0](https://github.com/NASA-PDS/template-repo-java/tree/v0.1.0) (2022-08-04)
 
 [Full Changelog](https://github.com/NASA-PDS/template-repo-java/compare/11104d38a2dfcb23e537dd9e8436b1d3b204d879...v0.1.0)
