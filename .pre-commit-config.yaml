@@ -24,6 +24,15 @@ repos:
             -
                 id: git-secrets
 
+        # Terraform Pre-Commit hooks
+    -   repo: https://github.com/antonbabenko/pre-commit-terraform
+        rev: v1.81.0
+        hooks:
+        - id: terraform_fmt
+        - id: terraform_validate
+        - id: terraform_tflint
+        - id: terrascan
+        - id: terraform_tfsec
 ...
 
 # -*- mode: YAML; tab-width: 4 -*-
