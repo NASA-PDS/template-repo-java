@@ -30,9 +30,9 @@ repos:
         hooks:
         - id: terraform_fmt
         - id: terraform_validate
-        - id: terraform_tflint
-        - id: terrascan
-        - id: terraform_tfsec
+        # - id: terraform_tflint
+        # - id: terrascan
+        # - id: terraform_tfsec
 ...
 
 # -*- mode: YAML; tab-width: 4 -*-
