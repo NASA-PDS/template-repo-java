@@ -84,23 +84,43 @@ to produce a complete package. This runs all the phases necessary, including com
 
 #### 🪝 Pre-Commit Hooks
 
-This package comes with a configuration for [Pre-Commit](https://pre-commit.com/), a system for automating and standardizing `git` hooks for code linting, security scanning, etc. Here in this Java template repository, we use Pre-Commit with [Git Secrets](https://github.com/awslabs/git-secrets) to prevent the accidental committing or commit messages containing secrets like API keys and passwords.
+This package comes with a configuration for [Pre-Commit](https://pre-commit.com/), a system for automating and standardizing `git` hooks for code linting, security scanning, etc. Here in this Java template repository, we use Pre-Commit with [Detect Secrets](https://nasa-ammos.github.io/slim/docs/guides/software-lifecycle/security/secrets-detection/) to prevent the accidental committing or commit messages containing secrets like API keys and passwords.
 
-Pre-Commit is language-neutral, but is itself written in Python. To take advantage of Pre-Commit, you'll need a nearby Python installation. A recommended way to do this is with a virtual Python environment. Using the command line interface, run:
+Pre-Commit and `detect-secrets` are language-neutral, but they themselves are written in Python. To take advantage of these features, you'll need a nearby Python installation. A recommended way to do this is with a virtual Python environment. Using the command line interface, run:
 
 ```console
 $ python -m venv .venv
 $ source .venv/bin/activate   # Use source .venv/bin/activate.csh if you're using a C-style shell
-$ pip install pre-commit
-$ pre-commit install
-$ pre-commit install -t pre-push
-$ pre-commit install -t prepare-commit-msg
-$ pre-commit install -t commit-msg
+$ pip install pre-commit https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
 ```
+
+You can then establish a secrets baseline in your Maven-based repository:
+
+    detect-secrets scan . \
+        --all-files \
+        --disable-plugin AbsolutePathDetectorExperimental \
+        --exclude-files '\.secrets..*' \
+        --exclude-files '\.git.*' \
+        --exclude-files 'target' > .secrets.baseline
+
+Review the secrets to determine which should be allowed and which are false positives:
+
+    detect-secrets audit .secrets.baseline
+
+Please remove any secrets that should not be seen by the public. You can then add the baseline file to the commit:
+
+    git add .secrets.baseline
+
+Finally, install the pre-commit hooks:
+
+    pre-commit install
+    pre-commit install -t pre-push
+    pre-commit install -t prepare-commit-msg
+    pre-commit install -t commit-msg
 
 You can then work normally. Pre-commit will run automatically during `git commit` and `git push` so long as the Python virtual environment is active.
 
-👉 **Note:** For Git Secrets to work, there is a one-time setup required to your personal global Git configuration. See [the wiki entry on Git Secrets](https://github.com/NASA-PDS/nasa-pds.github.io/wiki/Git-and-Github-Guide#git-secrets) to learn how to do this.
+👉 **Note:** For Detect Secrets to work, there is a one-time setup required to your personal global Git configuration. See [the wiki entry on Detect Secrets](https://github.com/NASA-PDS/nasa-pds.github.io/wiki/Git-and-Github-Guide#detect-secrets) to learn how to do this.
 
 
 ### 🚅 Continuous Integration & Deployment
