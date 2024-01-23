@@ -1,6 +1,6 @@
 # Changelog
 
-## [«unknown»](https://github.com/NASA-PDS/template-repo-java/tree/«unknown») (2023-12-29)
+## [«unknown»](https://github.com/NASA-PDS/template-repo-java/tree/«unknown») (2024-01-23)
 
 [Full Changelog](https://github.com/NASA-PDS/template-repo-java/compare/v0.1.0...«unknown»)
 
