@@ -101,6 +101,7 @@ You can then establish a secrets baseline in your Maven-based repository:
         --disable-plugin AbsolutePathDetectorExperimental \
         --exclude-files '\.secrets..*' \
         --exclude-files '\.git.*' \
+        --exclude-files '\.pre-commit-config\.yaml' \
         --exclude-files 'target' > .secrets.baseline
 
 Review the secrets to determine which should be allowed and which are false positives:
