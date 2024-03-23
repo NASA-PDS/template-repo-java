@@ -1,8 +1,8 @@
 # Changelog
 
-## [v0.2.0-SNAPSHOT](https://github.com/NASA-PDS/template-repo-java/tree/v0.2.0-SNAPSHOT) (2024-02-05)
+## [«unknown»](https://github.com/NASA-PDS/template-repo-java/tree/«unknown») (2024-03-23)
 
-[Full Changelog](https://github.com/NASA-PDS/template-repo-java/compare/v0.1.0...v0.2.0-SNAPSHOT)
+[Full Changelog](https://github.com/NASA-PDS/template-repo-java/compare/v0.1.0...«unknown»)
 
 **Other closed issues:**
 
