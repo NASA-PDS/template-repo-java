@@ -166,7 +166,7 @@ Go through this file line-by-line and replace the template values with your own.
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
-                <version>3.4.0</version>
+                <version>3.4.1</version>
                 <configuration>
                     <archive>
                         <manifest>
