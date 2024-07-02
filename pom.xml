@@ -55,7 +55,7 @@ Go through this file line-by-line and replace the template values with your own.
     <parent>
         <groupId>gov.nasa</groupId>
         <artifactId>pds</artifactId>
-        <version>1.17.0</version>
+        <version>1.18.0</version>
     </parent>
   
     <!-- My project metadata here -->
@@ -178,6 +178,37 @@ Go through this file line-by-line and replace the template values with your own.
                         </manifestEntries>
                     </archive>
                 </configuration>
+            </plugin>
+            
+            <!-- Build the site -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>4.0.0-M14</version>
+                <configuration>
+                    <skip>false</skip>  <!-- This is `true` in parent pom -->
+                    <skipDeploy>false</skipDeploy>  <!-- This is `true` in parent pom -->
+                </configuration>
+            </plugin>
+            
+            <!-- Need this for Maven central requirements -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.3.1</version>
+                <executions>
+                    <execution>
+                        <id>make-source-jar</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                            <goal>test-jar-no-fork</goal>
+                        </goals>
+                        <configuration>
+                            <excludeResources>true</excludeResources>
+                        </configuration>
+                    </execution>
+                </executions>
             </plugin>
         </plugins>
     </build>
