@@ -28,6 +28,7 @@ repos:
               - --exclude-files '\.secrets..*'
               - --exclude-files '\.git.*'
               - --exclude-files 'target'
+              - --exclude-files '\.pre-commit-config.yaml'
 
 ...
 
