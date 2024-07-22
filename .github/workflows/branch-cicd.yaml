@@ -62,7 +62,7 @@ jobs:
                     java-version: ${{matrix.java-version}}
             -
                 name: 🩺 Test Software
-                run: mvn test
+                run: mvn test site
 
 ...
 
