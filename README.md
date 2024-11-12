@@ -54,6 +54,8 @@ _Installation instructions here. Include any system-wide requirements (`bres ins
 
 _Basic usage instructions here. If possible, make it so your program works correctly "out of the box" as an executable `.jar`, or as a drop-in `.war`, etc., without any additional configuration._
 
+_An example `log4j.properties` file is in `src/main/resources`; mention how to customize it as needed—or delete it if it doesn't apply to your app._
+
 
 ## 👥 Contributing
 
@@ -81,10 +83,12 @@ to produce a complete package. This runs all the phases necessary, including com
 -   `install` - install into your local repository
 -   `deploy` - deploy to a remote repository — note that the Roundup action does this automatically for releases
 
-#### :guardsman: Secrets Detection Setup and Update
+#### 💂‍♂️ Secrets Detection Setup and Update
+
 The PDS uses [Detect Secrets](https://nasa-ammos.github.io/slim/docs/guides/software-lifecycle/security/secrets-detection/)) to help prevent committing information to a repository that should remain secret.
 
 For Detect Secrets to work, there is a one-time setup required to your personal global Git configuration, as well as several steps to create or update the **required** `.secrets.baseline` file needed to avoid false positive failures of the software. See [the wiki entry on Detect Secrets](https://github.com/NASA-PDS/nasa-pds.github.io/wiki/Git-and-Github-Guide#detect-secrets) to learn how to do this.
+
 
 #### 🪝 Pre-Commit Hooks
 
