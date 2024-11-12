@@ -1,8 +1,12 @@
 # Changelog
 
-## [«unknown»](https://github.com/NASA-PDS/template-repo-java/tree/«unknown») (2024-09-03)
+## [«unknown»](https://github.com/NASA-PDS/template-repo-java/tree/«unknown») (2024-11-12)
 
 [Full Changelog](https://github.com/NASA-PDS/template-repo-java/compare/v0.1.0...«unknown»)
+
+**Requirements:**
+
+- As a developer, I want to be proposed with a default log4j configuration [\#61](https://github.com/NASA-PDS/template-repo-java/issues/61)
 
 **Other closed issues:**
 
