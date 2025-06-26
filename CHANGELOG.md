@@ -1,6 +1,6 @@
 # Changelog
 
-## [«unknown»](https://github.com/NASA-PDS/template-repo-java/tree/«unknown») (2025-05-30)
+## [«unknown»](https://github.com/NASA-PDS/template-repo-java/tree/«unknown») (2025-06-26)
 
 [Full Changelog](https://github.com/NASA-PDS/template-repo-java/compare/v0.1.0...«unknown»)
 
@@ -10,6 +10,7 @@
 
 **Other closed issues:**
 
+- Upgrade template java repo to publish to Maven Central Portal [\#67](https://github.com/NASA-PDS/template-repo-java/issues/67)
 - Add git-secrets pre-commit to java template repo [\#25](https://github.com/NASA-PDS/template-repo-java/issues/25)
 
 ## [v0.1.0](https://github.com/NASA-PDS/template-repo-java/tree/v0.1.0) (2022-08-04)
