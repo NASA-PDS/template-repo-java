@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<project name="My PDS Tool">
+<project name="My PDS Tool" xmlns="http://maven.apache.org/DECORATION/1.7.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/DECORATION/1.7.0 http://maven.apache.org/xsd/decoration-1.7.0.xsd">
   <skin>
     <groupId>org.apache.maven.skins</groupId>
     <artifactId>maven-fluido-skin</artifactId>
@@ -36,6 +37,17 @@
   <version/>
 
   <body>
+    <head>
+      <![CDATA[<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q1K210DS5W"></script>]]>
+      <![CDATA[
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-Q1K210DS5W');
+      </script>
+      ]]>
+    </head>
     <menu name="About">
       <item name="About" href="index.html"/>
     </menu>
