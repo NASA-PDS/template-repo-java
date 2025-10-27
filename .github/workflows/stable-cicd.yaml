@@ -72,7 +72,7 @@ jobs:
                 uses: NASA-PDS/roundup-action@stable
                 with:
                     assembly: stable
-                    packages: openjdk11-jdk
+                    packages: openjdk17-jdk
                 env:
                     central_portal_username: ${{secrets.CENTRAL_REPOSITORY_USERNAME}}
                     central_portal_token: ${{secrets.CENTRAL_REPOSITORY_TOKEN}}
