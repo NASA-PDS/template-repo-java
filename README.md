@@ -85,26 +85,36 @@ to produce a complete package. This runs all the phases necessary, including com
 
 #### 💂‍♂️ Secrets Detection Setup and Update
 
-The PDS uses [Detect Secrets](https://nasa-ammos.github.io/slim/docs/guides/software-lifecycle/security/secrets-detection/)) to help prevent committing information to a repository that should remain secret.
+The PDS uses [Detect Secrets](https://nasa-ammos.github.io/slim/docs/guides/software-lifecycle/security/secrets-detection/) to help prevent committing information to a repository that should remain secret.
 
-For Detect Secrets to work, there is a one-time setup required to your personal global Git configuration, as well as several steps to create or update the **required** `.secrets.baseline` file needed to avoid false positive failures of the software. See [the wiki entry on Detect Secrets](https://github.com/NASA-PDS/nasa-pds.github.io/wiki/Git-and-Github-Guide#detect-secrets) to learn how to do this.
-
-
-#### 🪝 Pre-Commit Hooks
-
-This package comes with a configuration for [Pre-Commit](https://pre-commit.com/), a system for automating and standardizing `git` hooks for code linting, security scanning, etc. Here in this Java template repository, we use Pre-Commit with [Detect Secrets](https://nasa-ammos.github.io/slim/docs/guides/software-lifecycle/security/secrets-detection/) to prevent the accidental committing or commit messages containing secrets like API keys and passwords.
-
-Pre-Commit and `detect-secrets` are language-neutral, but they themselves are written in Python. To take advantage of these features, you'll need a nearby Python installation. A recommended way to do this is with a virtual Python environment. Using the command line interface, run:
+Pre-Commit and `detect-secrets` are language-neutral but written in Python. To take advantage of these features, you'll need a nearby Python installation. Create a virtual environment and install the required tools:
 
 ```console
-$ python -m venv .venv
-$ source .venv/bin/activate   # Use source .venv/bin/activate.csh if you're using a C-style shell
-$ pip install pre-commit git+https://github.com/NASA-AMMOS/slim-detect-secrets.git@exp
+$ python -m venv venv
+$ source venv/bin/activate   # Use source venv/bin/activate.csh for C-style shells
+$ pip install -r scripts/requirements.txt
 ```
 
-See Detect Secrets information above to setup your secrets baseline prior to proceeding.
+Make a baseline for any secrets (email addresses, passwords, API keys, etc.) in the repository:
 
-Finally, install the pre-commit hooks:
+    scripts/detect_secrets_baseline.sh scan
+
+Review and classify each detected secret (mark as `is_secret: true/false`):
+
+    scripts/detect_secrets_baseline.sh audit
+
+Commit the baseline:
+
+    git add .secrets.baseline
+
+To exclude additional files specific to this repo from scanning, add regex patterns (one per line) to `.detect-secrets-ignore`. Global exclusions (`target/`, `venv/`, etc.) are already handled by the script.
+
+
+#### 🧵 Pre-Commit Hooks
+
+This package comes with a configuration for [Pre-Commit](https://pre-commit.com/), a system for automating and standardizing `git` hooks for code linting, security scanning, etc. Here in this Java template repository, we use Pre-Commit with [Detect Secrets](https://nasa-ammos.github.io/slim/docs/guides/software-lifecycle/security/secrets-detection/) to prevent the accidental committing of secrets like API keys and passwords.
+
+After completing the secrets baseline setup above, install the pre-commit hooks:
 
     pre-commit install
     pre-commit install -t pre-push
@@ -112,8 +122,6 @@ Finally, install the pre-commit hooks:
     pre-commit install -t commit-msg
 
 You can then work normally. Pre-commit will run automatically during `git commit` and `git push` so long as the Python virtual environment is active.
-
-👉 **Note:** For Detect Secrets to work, there is a one-time setup required to your personal global Git configuration. See [the wiki entry on Detect Secrets](https://github.com/NASA-PDS/nasa-pds.github.io/wiki/Git-and-Github-Guide#detect-secrets) to learn how to do this.
 
 
 ### 🚅 Continuous Integration & Deployment
