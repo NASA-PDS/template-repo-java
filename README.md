@@ -95,7 +95,7 @@ $ source venv/bin/activate   # Use source venv/bin/activate.csh for C-style shel
 $ pip install -r scripts/requirements.txt
 ```
 
-Make a baseline for any secrets (email addresses, passwords, API keys, etc.) in the repository:
+Make a baseline for any secrets (passwords, API keys, etc.) in the repository:
 
     scripts/detect_secrets_baseline.sh scan
 
