@@ -1,6 +1,6 @@
 # Changelog
 
-## [«unknown»](https://github.com/NASA-PDS/template-repo-java/tree/«unknown») (2026-06-11)
+## [«unknown»](https://github.com/NASA-PDS/template-repo-java/tree/«unknown») (2026-07-10)
 
 [Full Changelog](https://github.com/NASA-PDS/template-repo-java/compare/v0.1.0...«unknown»)
 
@@ -10,6 +10,7 @@
 
 **Other closed issues:**
 
+- Standardize secrets detection to use script-based approach [\#101](https://github.com/NASA-PDS/template-repo-java/issues/101)
 - Upgrade template java repo to publish to Maven Central Portal [\#67](https://github.com/NASA-PDS/template-repo-java/issues/67)
 - Add git-secrets pre-commit to java template repo [\#25](https://github.com/NASA-PDS/template-repo-java/issues/25)
 
