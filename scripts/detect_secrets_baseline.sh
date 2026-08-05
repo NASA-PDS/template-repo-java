@@ -39,7 +39,10 @@ GLOBAL_EXCLUDES=(
     '\.secrets\..*'             # the baseline files themselves
     '(^|/)\.git/'               # git internals (path-segment anchored to avoid blocking .github/)
     '\.pre-commit-config\.yaml' # pre-commit config (often contains hook refs)
+    'node_modules'              # JS dependencies
     'target'                    # Maven build output
+    'dist'                      # build output
+    'build'                     # build output
     '\.venv'                    # Python virtual envs
     'venv'
     'scripts/detect_secrets_baseline\.sh'  # this script
@@ -151,7 +154,8 @@ check_confirmed_secrets() {
 check_new_secrets() {
     local scratch="$BASELINE.new"
     cp "$BASELINE" "$scratch"
-    trap 'rm -f "$scratch"' RETURN
+    # shellcheck disable=SC2064
+    trap "rm -f '$scratch'" RETURN
 
     "$DETECT_SECRETS" scan "${EXCLUDE_ARGS[@]}" --baseline "$scratch" > /dev/null
 
